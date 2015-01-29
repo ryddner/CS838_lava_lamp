@@ -1,0 +1,6 @@
+cp -r water_nocona water_nocona_old
+cp -r output output_old
+rm -rf output
+scons -Q --random --implicit-cache -u -j 4 CXX=g++44
+./water_nocona  
+../../opengl_2d/opengl_2d_nocona output/
